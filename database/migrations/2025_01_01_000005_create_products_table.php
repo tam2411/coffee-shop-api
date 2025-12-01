@@ -1,0 +1,2 @@
+<?php
+// products migration

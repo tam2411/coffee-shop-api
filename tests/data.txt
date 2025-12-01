@@ -1,0 +1,9 @@
+{
+  "label": "Nhà riêng",
+  "receiver_name": "Thanh Hiền",
+  "receiver_phone": "0905123456",
+  "address_line": "123 Lê Duẩn",
+  "ward": "Hòa Thuận Tây",
+  "district": "Hải Châu",
+  "province": "Đà Nẵng"
+}

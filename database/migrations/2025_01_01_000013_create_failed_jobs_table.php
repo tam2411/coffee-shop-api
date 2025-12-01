@@ -1,0 +1,2 @@
+<?php
+// failed_jobs

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    //Đăng nhập
+    //Dang nhập
     public function login(Request $request){
         $credentials = [
             'email' => $request->email,
@@ -26,14 +26,15 @@ class AuthController extends Controller
         $token = JWTAuth::fromUser($user);
 
         return response()->json([
-            'message' => 'Đăng nhập thành công',
-            'token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => config('jwt.ttl') * 60,
-            'user' => $user
+            'ok' => true,
+            'id' => $user->id,
+            'token' => 'Bearer ' . $token,
+            'email' => $user->email,
+            'fullName' => $user->full_name,
+            'role' => $user->role,
         ]);
     }
-    //Đăng ký
+    //Dang ký
     public function register(Request $request){
 
     $exists = User::where('email', $request->email)->exists();
@@ -69,4 +70,3 @@ class AuthController extends Controller
         ]);
     }
 }
-?>
